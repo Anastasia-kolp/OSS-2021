@@ -1,0 +1,43 @@
+    1  cd
+    2  mkdir test
+    3  cd test
+    4  touch file
+    5  ll file
+    6  chmod 000 file
+    7  ll file
+    8  echo "тест" > file
+    9  cat file
+   10  man chmod
+   11  chmod 010 file
+   12  ll file
+   13  chmod 000 file
+   14  chmod u+w file
+   15  ll file
+   16  echo "test" > file
+   17  cat file
+   18  chmog g+r file
+   19  chmod g+r file
+   20  ll file
+   21  cat file
+   22  chmod u+r file
+   23  ls -l file
+   24  cat file
+   25  mkdir dir || cd dir || touch new_file
+   26  ls
+   27  echo "file 2" > dir/new_file
+   28  ls dir
+   29  chmod a-x dir
+   30  ll dir
+   31  cat dir/new_file
+   32  rm dir/new_file
+   33  chown root file
+   34  chgrp root file
+   35  umask 0077
+   36  touch file1
+   37  ll file1
+   38  umask 0000
+   39  touch file2
+   40  ll file2
+   41  history
+   42  cat file
+   43  history > ~/labs/OSS-2021/lab2/lab2_history.txt

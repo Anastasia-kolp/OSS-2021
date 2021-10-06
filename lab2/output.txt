@@ -1,0 +1,14 @@
+[akolpakova@localhost test]$ ls -lR
+.:
+итого 8
+drw-rw-r--. 2 akolpakova akolpakova  22 окт  6 09:21 dir
+-r--r-----. 1 root       akolpakova   5 окт  6 09:18 file
+-rw-------. 1 akolpakova akolpakova   0 окт  6 09:25 file1
+-rw-rw-rw-. 1 akolpakova akolpakova   0 окт  6 09:26 file2
+-rw-rw-r--. 1 akolpakova akolpakova 385 окт  6 09:38 output.txt
+
+./dir:
+ls: невозможно получить доступ к './dir/new_file': Отказано в доступе
+итого 0
+-????????? ? ? ? ?            ? new_file
+
