@@ -1,0 +1,22 @@
+    1  ls -l /dev/sda{,[123]}
+    2  lsblk --list
+    3  cat /proc/diskstats
+    4  cat /proc/devices
+    5  rm fs.img
+    6  dd if=/dev/zero of=./fs.img bs=1M count=10
+    7  sudo losetup --find --show ./fs.img
+    8  sudo losetup --list
+    9  mkfs -t ext4 /dev/loop0
+   10  sudo mkfs -t ext4 /dev/loop0
+   11  blkid /dev/loop0
+   12  sudo blkid /dev/loop0
+   13  sudo mount /dev/loop0 /mnt
+   14  sudo mount | grep /mnt
+   15  df -h /mnt
+   16  df -hi /mnt
+   17  sudo umount /dev/loop0
+   18  sudo tune2fs -l /dev/loop0
+   19  losetup --detach /dev/loop0
+   20  sudo losetup --detach /dev/loop0
+   21  sudo losetup --list
+   22  history > labs/OSS-2021/lab6_history.txt
