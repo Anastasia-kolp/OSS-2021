@@ -1,0 +1,17 @@
+    1  uname -r
+    2  cd
+    3  rpmdev-setuptree
+    4  yumdownloader --source kernel
+    5  rpm -i kernel-4.18.0-348.7.1.el8_5.src.rpm 
+    6  sudo rpm -i kernel-4.18.0-348.7.1.el8_5.src.rpm 
+    7  ls rpmbuild/SPECS/
+    8  ls rpmbuild/SOURCES/
+    9  rpmbuild -bs ~/rpmbuild/SPECS/kernel.spec
+   10  ls ~/rpmbuild/SRPMS/
+   11  yum-builddep ~/rpmbuild/SRPMS/kernel-4.18.0-348.7.1.el8.src.rpm 
+   12  sudo yum-builddep ~/rpmbuild/SRPMS/kernel-4.18.0-348.7.1.el8.src.rpm 
+   13  rpmbuild -bp --target=$(uname -m) rpmbuild/SPECS/kernel.spec
+   14  cd rpmbuild/BUILD/kernel*/linux*
+   15  ls ~/rpmbuild/BUILD/kernel-4.18.0-348.7.1.el8/linux-4.18.0-348.7.1.el8.x86_64/
+   16  mkdir labs/OSS-2021/lab11
+   17  history > labs/OSS-2021/lab11/lab11_history.txt

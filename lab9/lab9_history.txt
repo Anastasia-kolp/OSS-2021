@@ -1,0 +1,76 @@
+   1  ps xaf
+   2  ps xawf -eo pid,user,cgroup,args
+   3  systemd-cgls
+   4  ls -l /usr/lib/systemd/system/
+   5  ls -l /run/systemd/system/
+   6  ls -l /etc/systemd/system/
+   7  systemctl -t help
+   8  systemctl status
+   9  ystemctl --type=service
+  10  systemctl --type=service
+  11  systemctl status auditd.service
+  12  systemctl is-active auditd.service
+  13  systemctl is-enabled auditd.service
+  14  systemctl list-dependencies --after auditd.service
+  15  systemctl list-dependencies --before auditd.service
+  16  systemctl list-units --type=service
+  17  systemctl list-units --type=service --all
+  18  systemctl list-units --type=socket --all
+  19  systemctl list-unit-files --type=service
+  20  systemctl --failed --type=service
+  21  systemctl status httpd.service
+  22  systemctl start httpd.service
+  23  sudo passwd akolpakova
+  24  systemctl start httpd.service
+  25  systemctl status httpd.service
+  26  systemctl restart httpd.service
+  27  systemctl status httpd.service
+  28  systemctl stop httpd.service
+  29  systemctl enable httpd.service
+  30  systemctl status httpd.service
+  31  systemctl start httpd.service 
+  32  systemctl status httpd.service 
+  33  systemctl disable httpd.service
+  34  systemctl mask httpd.service
+  35  systemctl status httpd.service 
+  36  systemctl start httpd.service
+  37  systemctl unmask httpd.service
+  38  systemctl list-units --type=target
+  39  systemctl list-units --type=target --all
+  40  systemctl get-default
+  41  ls -l /etc/systemd/system/default.target
+  42  systemctl set-default multi-user.target
+  43  systemctl isolate multi-user.target
+  44  systemctl set-default graphical.target
+  45  reboot
+  46  systemctl --no-wall rescue
+  47  systemctl --no-wall emergency
+  48  systemctl halt
+  49  systemctl --no-wall poweroff
+  50  hostnamectl
+  51  timedatectl
+  52  localectl
+  53  loginctl
+  54  loginctl session-status 2
+  55  loginctl show-user user1
+  56  loginctl show-user akolpakova
+  57  nano mephi.service
+  58  ls -lZ mephi.service 
+  59  journalctl -b
+  60  ausearch -m avc -ts recent
+  61  sudo ausearch -m avc -ts recent
+  62  systemctl start mephi.service
+  63  ls
+  64  su ~
+  65  su ~ akolpakova
+  66  su
+  67  systemctl start mephi.service
+  68  journalctl -u mephi.service 
+  69  cat mephi.path
+  70  nano mephi.path
+  71  systemctl enable mephi.path 
+  72  systemctl start mephi.path 
+  73  touch /tmp/mephi.file
+  74  history > labs/OSS-2021/lab9/lab9_history.txt
+  75  mkdir labs/OSS-2021/lab9
+  76  history > labs/OSS-2021/lab9/lab9_history.txt
